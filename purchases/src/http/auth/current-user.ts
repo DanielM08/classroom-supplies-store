@@ -9,3 +9,7 @@ export const CurrentUser = createParamDecorator(
     return req.user;
   },
 );
+
+export interface AuthUser {
+  sub: string;
+}
