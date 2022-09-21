@@ -15,7 +15,7 @@ export class CoursesService {
     return this.prisma.course.findMany();
   }
 
-  getCustomerById(id: string) {
+  getCourseById(id: string) {
     return this.prisma.course.findUnique({
       where: {
         id,

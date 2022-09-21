@@ -18,7 +18,7 @@ export class EnrollmentResolver {
 
   @Query(() => [Enrollment])
   @UseGuards(AuthorizationGuard)
-  students() {
+  enrollments() {
     return this.enrollmentsService.listAllEnrollments();
   }
 
@@ -29,6 +29,6 @@ export class EnrollmentResolver {
 
   @ResolveField()
   course(@Parent() enrollment: Enrollment) {
-    return this.coursesService.getCustomerById(enrollment.courseId);
+    return this.coursesService.getCourseById(enrollment.courseId);
   }
 }

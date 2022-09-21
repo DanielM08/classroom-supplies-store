@@ -1,5 +1,4 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql';
-import { Student } from './student';
 
 @ObjectType()
 export class Course {
@@ -7,7 +6,7 @@ export class Course {
   id: string;
 
   @Field()
-  title: Student;
+  title: string;
 
   @Field()
   slug: string;

@@ -20,7 +20,7 @@ export class CourseResolver {
 
   @Query(() => [Course])
   @UseGuards(AuthorizationGuard)
-  students() {
+  courses() {
     return this.coursesService.listAllCourses();
   }
 
@@ -42,7 +42,7 @@ export class CourseResolver {
       throw new UnauthorizedException();
     }
 
-    return this.coursesService.getCustomerById(id);
+    return this.coursesService.getCourseById(id);
   }
 
   @Mutation(() => Course)
