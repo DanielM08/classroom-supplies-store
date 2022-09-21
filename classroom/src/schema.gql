@@ -28,6 +28,8 @@ type Course {
 
 type Query {
   students: [Student!]!
+  course(id: String!): Course!
+  me: Student!
 }
 
 type Mutation {
